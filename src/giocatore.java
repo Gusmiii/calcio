@@ -48,14 +48,23 @@ public class giocatore {
 
     public void setCapitano(boolean capitano) {
         this.capitano = capitano;
+        if (goal<0){
+            System.out.println();
+        }
     }
 
     public void setGoal(int goal) {
         this.goal = goal;
+        if (goal<0){
+            System.out.println();
+        }
     }
 
     public void setNome(String nome) {
         this.nome = nome;
+        if (goal<0){
+            System.out.println();
+        }
     }
 
 }
