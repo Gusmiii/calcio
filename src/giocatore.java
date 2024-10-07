@@ -13,6 +13,26 @@ public class giocatore {
     public giocatore(int goal){
         this.goal=goal;
     }
+    public giocatore(String nome){
+        this.nome=nome;
+    }
+    public giocatore(boolean capitano,int goal){
+        this.capitano=capitano;
+        this.goal=goal;
+    }
+    public giocatore(boolean capitano,String nome){
+        this.capitano=capitano;
+        this.nome=nome;
+    }
+    public giocatore(int goal,String nome){
+        this.goal=goal;
+        this.nome=nome;
+    }
+    public giocatore(){
+        this.capitano = false;
+        this.goal = 0;
+        this.nome = "";
+    }
 
     public boolean getCapitano() {
         return capitano;
