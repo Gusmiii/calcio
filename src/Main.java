@@ -1,9 +1,17 @@
 import java.util.Scanner;
     public class Main {
+        static giocatore [] squadra;
         public static void main (String[]args){
             Scanner in =new Scanner(System.in);
             int scelta;
+            int goal = 0;
+            int indice = 0;
+            int n;
             String nome;
+            boolean capitano;
+            System.out.println("di quanti giocatori è compota la sqaudra?");
+            n=in.nextInt();
+            squadra = new giocatore[n];
             do {
                 System.out.println("\n--- Menu Squadra di Calcio ---");
                 System.out.println("1. Aggiungi giocatore");
@@ -20,7 +28,13 @@ import java.util.Scanner;
 
                 switch (scelta) {
                     case 1:
-
+        System.out.println("inserisci un nome per il giocatore");
+            nome =in.nextLine();
+            System.out.println("inserisci true se è capitano false se non lo è  ");
+            capitano=in.nextBoolean();
+            System.out.println("inserisci quanti goal ha segnato");
+            goal = in.nextInt();
+            aggiuntagiocatore(indice,nome,goal,capitano);
                         break;
                     case 2:
 
@@ -48,5 +62,9 @@ import java.util.Scanner;
                 }
             } while (scelta != 0);
 
+        }
+        public static void aggiuntagiocatore(int indice,String nome,int goal,boolean capitano){
+            squadra [indice] = new giocatore(capitano,goal,nome);
+            indice++;
         }
     }
