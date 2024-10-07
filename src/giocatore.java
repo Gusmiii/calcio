@@ -3,35 +3,35 @@ public class giocatore {
     private int goal;
     private String nome;
     public giocatore(boolean capitano,int goal, String nome){
-        this.capitano=capitano;
-        this.goal=goal;
-        this.nome=nome;
+        setCapitano(capitano);
+        setGoal(goal);
+        setNome(nome);
     }
     public giocatore(boolean capitano){
-        this.capitano=capitano;
+        setCapitano(capitano);
     }
     public giocatore(int goal){
-        this.goal=goal;
+        setGoal(goal);
     }
     public giocatore(String nome){
-        this.nome=nome;
+        setNome(nome);
     }
     public giocatore(boolean capitano,int goal){
-        this.capitano=capitano;
-        this.goal=goal;
+        setCapitano(capitano);
+        setGoal(goal);
     }
     public giocatore(boolean capitano,String nome){
-        this.capitano=capitano;
-        this.nome=nome;
+        setCapitano(capitano);
+        setNome(nome);
     }
     public giocatore(int goal,String nome){
-        this.goal=goal;
-        this.nome=nome;
+        setGoal(goal);
+        setNome(nome);
     }
     public giocatore(){
-        this.capitano = false;
-        this.goal = 0;
-        this.nome = "";
+        setCapitano(capitano);
+        setGoal(goal);
+        setNome(nome);
     }
 
     public boolean getCapitano() {
