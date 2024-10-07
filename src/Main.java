@@ -1,5 +1,7 @@
 import java.util.Scanner;
-    public class Main {
+import java.util.SimpleTimeZone;
+
+public class Main {
         static giocatore [] squadra;
         public static void main (String[]args){
             Scanner in =new Scanner(System.in);
@@ -7,6 +9,7 @@ import java.util.Scanner;
             int goal = 0;
             int indice = 0;
             int n;
+            String visualizza="";
             String nome;
             boolean capitano;
             System.out.println("di quanti giocatori è compota la sqaudra?");
@@ -35,6 +38,7 @@ import java.util.Scanner;
             System.out.println("inserisci quanti goal ha segnato");
             goal = in.nextInt();
             aggiuntagiocatore(indice,nome,goal,capitano);
+            indice++;
                         break;
                     case 2:
 
@@ -63,8 +67,14 @@ import java.util.Scanner;
             } while (scelta != 0);
 
         }
-        public static void aggiuntagiocatore(int indice,String nome,int goal,boolean capitano){
+        public void aggiuntagiocatore(int indice,String nome,int goal,boolean capitano){
             squadra [indice] = new giocatore(capitano,goal,nome);
-            indice++;
+
+        }
+        public String visualizza(int n,String visualizza){
+            for (int i=0;i<n;i++){
+                visualizza = visualizza + squadra[i].getNome();
+            }
+            return visualizza;
         }
     }
